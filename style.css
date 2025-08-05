@@ -1,0 +1,247 @@
+/* --------------------------------Normalize-------------------------------- */
+body,ul,li,h1,h2,h3,h4,h5,h6,p {padding: 0; margin: 0; list-style: none;}
+a {text-decoration: none; color: inherit;}
+img {display: block; width: 100%; object-fit: cover;}
+/* --------------------------------Normalize end-------------------------------- */
+
+/* --------------------------------popup start-------------------------------- */
+.start-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #0009;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.start-popup.close {
+  display: none;
+}
+
+.start-popup > div {
+  width: 296px;
+  position: relative;
+}
+
+.start-popup > div::before {
+  content: "by리뷰에이드";
+  font-size: 10px;
+  position: absolute;
+  right: 8px;
+  bottom: 102%;
+  color: #fff;
+}
+
+.start-popup > div > .popup-img-box > img {
+  border-radius: 8px 8px 0 0;
+  outline: 2px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+.start-popup > div > .popup-txt-box {
+  padding: 20px 24px;
+  background-color: #f7f7f7;
+}
+
+.start-popup > div > .popup-txt-box > h1 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 4px;
+}
+
+.start-popup > div > .popup-txt-box > p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #9a9a9a;
+  margin-bottom: 16px;
+}
+
+.start-popup > div > .popup-txt-box > a {
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-popup > div > .popup-close {
+  background-color: #fff;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 8px 8px;
+}
+
+.start-popup > div > .popup-close > p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #9a9a9a;
+  cursor: pointer;
+}
+
+/* --------------------------------popup end-------------------------------- */
+
+/* --------------------------------custom start-------------------------------- */
+/* --------------------------------coupon start-------------------------------- */
+.coupon {
+  background-color: #6c7fa2;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.coupon.close {
+  display: none;
+}
+
+.coupon > a {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.coupon > .coupon-close {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  background: url(//www.ollio.kr/_msync/img/icon_popup_close_wt.svg) no-repeat center;
+  cursor: pointer;
+}
+/* --------------------------------coupon end-------------------------------- */
+
+/* --------------------------------header start-------------------------------- */
+header {
+  display: flex;
+  background-color: pink;
+  padding: 0 100px;
+  height: 90px;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+}
+
+header > .menu-1 > .menu-box-1 {
+  display: flex;
+}
+
+header > .menu-1 > .menu-box-1 > li {
+  margin-left: 30px;
+}
+
+header > .menu-1 > .menu-box-1 > li:first-child {
+  margin-left: 0;
+}
+
+header > .menu-1 > .menu-box-1 > li > a {
+  font-size: 13px;
+  color: #fff;
+}
+
+header > .menu-1 > .menu-box-1 > li > a:hover + div {
+  display: block;
+}
+
+header > .menu-1 > .menu-box-1 > li > div {
+  display: none;
+  position: fixed;
+  background: rgba(71, 66, 62, 0.3);
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 {
+  width: 506px;
+  height: 100%;
+  overflow: auto;
+  background: #FFFDF9;
+  padding: 145px 100px 100px;
+  box-sizing: border-box;
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 > .menu-1-2 {
+  display: flex;
+  position: absolute;
+  top: 67px;
+  left: 100px;
+}
+
+header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 > .menu-1-2 > li {
+  margin-left: 30px;
+}
+
+header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 > .menu-1-2 > li:first-child {
+  margin-left: 0;
+}
+
+header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 > .menu-1-2 > li > a {
+  font-size: 13px;
+  color: #8E8A83;
+}
+
+header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 > .menu-1-2 > li > a:hover {
+  color: #47423E;
+}
+
+header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 > .menu-2 > li {
+  margin-top: 14px;
+}
+
+header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 > .menu-2 > li.br {
+  margin-top: 34px;
+}
+
+header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 > .menu-2 > li > a {
+  display: block;
+  font-size: 23px;
+  line-height: 31px;
+  font-weight: 400;
+  color: #8E8A83;
+}
+
+header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 > .menu-2 > li > a:hover {
+  color: #47423E;
+}
+
+header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 > .bottom-menu > li {
+  margin-top: 10px;
+}
+
+header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 > .bottom-menu > li:first-child {
+  margin-top: 0;
+}
+
+header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 > .bottom-menu > li > a {
+  display: block;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #8E8A83;
+}
