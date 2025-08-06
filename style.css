@@ -137,9 +137,19 @@ header {
   padding: 0 100px;
   height: 90px;
   align-items: center;
+  justify-content: space-between;
   position: fixed;
   z-index: 99;
   width: 100%;
+  box-sizing: border-box;
+}
+
+header.show {
+  background-color: #fffdf9;
+}
+
+header.show * {
+  color: #000;
 }
 
 header > .menu-1 > .menu-box-1 {
@@ -244,4 +254,106 @@ header > .menu-1 > .menu-box-1 > li > div > .menu-box-2 > .bottom-menu > li > a 
   line-height: 22px;
   font-weight: 400;
   color: #8E8A83;
+}
+
+header > a {
+  display: block;
+  width: 90px;
+  height: 30px;
+}
+
+header > .icon-box {
+  display: flex;
+  width: 255px;
+  justify-content: flex-end;
+}
+
+header > .icon-box > a {
+  width: 20px;
+  height: 20px;
+  margin-left: 30px;
+  display: block;
+}
+
+header > .icon-box > div {
+  margin-left: 0;
+  cursor: pointer;
+}
+
+.search-box {
+  background-color: #fffdf9;
+  padding: 80px 0 120px;
+  position: fixed;
+  top: 90px;
+  width: 100%;
+  z-index: 90;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.search-box.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-box > .search-input {
+  display: flex;
+  width: 552px;
+  margin: 0 auto;
+  border-bottom: 1px solid #BEB9B1;
+  position: relative;
+}
+
+.search-box > .search-input::after {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  white-space: nowrap;
+  display: block;
+  background-position: center center;
+  background-size: cover;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background: url(/img/imgi_1_ico_search.svg);
+}
+.search-box > .search-input > input {
+  width: 100%;
+  height: 40px;
+  padding: 0 8px;
+  box-sizing: border-box;
+  border: 0;
+  background: transparent;
+  color: #191919;
+  position: relative;
+}
+
+.search-box > .search-input > input:focus {
+  outline: none;
+}
+
+.search-box > nav {
+  width: 372px;
+  margin: 24px auto 0;
+}
+
+.search-box > nav > ul {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-box > nav > ul > li {
+  padding: 4px 14px;
+  border-radius: 16px;
+  background: #F1EDE6;
+}
+
+.search-box > nav > ul > li > a {
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 21px;
+  color: #47423E;
+  white-space: nowrap;
 }
