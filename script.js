@@ -13,10 +13,10 @@ function Coupon_close() {
 }
 Coupon_close() ;
 
-function search_1() {
+function Search_1() {
   $('.search').click(function () {
     $('.search-box').toggleClass('show');
     $('header').toggleClass('show');
   });
 }
-search_1();
+Search_1();
