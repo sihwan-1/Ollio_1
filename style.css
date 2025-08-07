@@ -1,7 +1,19 @@
+/* --------------------------------font-------------------------------- */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,body {
+  font-family: 'Pretendard-Regular';
+}
 /* --------------------------------Normalize-------------------------------- */
 body,ul,li,h1,h2,h3,h4,h5,h6,p {padding: 0; margin: 0; list-style: none;}
 a {text-decoration: none; color: inherit;}
 img {display: block; width: 100%; object-fit: cover;}
+video {object-fit: contain; overflow: clip;}
 /* --------------------------------Normalize end-------------------------------- */
 
 /* --------------------------------popup start-------------------------------- */
@@ -132,7 +144,6 @@ img {display: block; width: 100%; object-fit: cover;}
 /* --------------------------------header start-------------------------------- */
 header {
   display: flex;
-  background-color: pink;
   padding: 0 100px;
   height: 90px;
   align-items: center;
@@ -141,10 +152,17 @@ header {
   z-index: 99;
   width: 100%;
   box-sizing: border-box;
+  top: 34px;
+  left: 0;
 }
 
 header.show {
   background-color: #fffdf9;
+}
+
+header.on {
+  background-color: #fffdf9;
+  top: 0;
 }
 
 header > .menu-1 > .menu-box-1 {
@@ -169,108 +187,43 @@ header.show > .menu-1 > .menu-box-1 > li > a {
   color: #47423e;
 }
 
-header > .menu-1:hover > div {
+header.on > .menu-1 > .menu-box-1 > li > a {
+  color: #47423e;
+}
+
+
+header > .menu-1:hover > .menu-box-2 {
   display: block;
 }
 
-header > .menu-1 > div {
+header > .menu-1 > .menu-box-2 {
   display: none;
-  position: fixed;
-  background: rgba(71, 66, 62, 0.3);
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
 }
 
-
-header > .menu-1 > div > .menu-box-2 {
-  width: 506px;
-  height: 100%;
-  overflow: auto;
-  background: #FFFDF9;
-  padding: 145px 100px 100px;
-  box-sizing: border-box;
-  z-index: 0;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-header > .menu-1 > div > .menu-box-2 > .menu-1-2 {
+header > .menu-1 > .menu-box-2 > .menu-1-2 {
   display: flex;
   position: absolute;
-  top: 67px;
+  top: 36px;
   left: 100px;
 }
 
-header > .menu-1 > div > .menu-box-2 > .menu-1-2 > li {
+header > .menu-1 > .menu-box-2 > .menu-1-2 > li {
   padding-left: 30px;
   position: relative;
 }
 
-header > .menu-1 > div > .menu-box-2 > .menu-1-2 > li:first-child {
+header > .menu-1 > .menu-box-2 > .menu-1-2 > li:first-child {
   padding-left: 0;
 }
 
-header > .menu-1> div > .menu-box-2 > .menu-1-2 > li > a {
+header > .menu-1> .menu-box-2 > .menu-1-2 > li > a {
   font-size: 13px;
   color: #8E8A83;
 }
 
-header > .menu-1 > div > .menu-box-2 > .menu-1-2 > li > a:hover {
+header > .menu-1 > .menu-box-2 > .menu-1-2 > li > a:hover {
   color: #47423E;
 }
-
-header > .menu-1 > div > .menu-box-2 > .menu-1-2 > li:hover > .menu-2 {
-  display: block;
-}
-
-header > .menu-1 > div > .menu-box-2 .menu-2 {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: none;
-}
-
-header > .menu-1 > div > .menu-box-2 > .menu-1-2 > li:nth-child(2) ul {
-  left: -44%;
-}
-
-header > .menu-1 > div > .menu-box-2 > .menu-1-2 > li:nth-child(3) ul {
-  left: -174%;
-}
-
-header > .menu-1 > div > .menu-box-2 > .menu-1-2 > li:nth-child(4) ul {
-  left: -250%;
-}
-
-header > .menu-1 > div > .menu-box-2 .menu-2 > li:first-child {
-  border: 1px solid red;
-  padding-top: 40px;
-}
-
-header > .menu-1 > div > .menu-box-2 .menu-2 > li {
-  margin-top: 14px;
-}
-
-header > .menu-1 > div > .menu-box-2 .menu-2 > li.br {
-  margin-top: 34px;
-}
-
-header > .menu-1 > div > .menu-box-2 .menu-2 > li > a {
-  display: block;
-  font-size: 23px;
-  line-height: 31px;
-  font-weight: 400;
-  color: #8E8A83;
-  white-space: nowrap;
-}
-
-header > .menu-1 > div > .menu-box-2 .menu-2 > li > a:hover {
-  color: #47423E;
-}
-
 
 header > a {
   display: block;
@@ -286,6 +239,13 @@ header.show > a > img:first-child {
   display: none;
 }
 header.show > a > img:last-child {
+  display: block;
+}
+
+header.on > a > img:first-child {
+  display: none;
+}
+header.on > a > img:last-child {
   display: block;
 }
 
@@ -314,10 +274,22 @@ header.show > .icon-box > a > img:last-child {
   display: block;
 }
 
+header.on > .icon-box > a > img:first-child {
+  display: none;
+}
+
+header.on > .icon-box > a > img:last-child {
+  display: block;
+}
+
 
 header > .icon-box > div {
   margin-left: 0;
   cursor: pointer;
+}
+
+header > .icon-box > div > img:nth-child(2) {
+  display: none;
 }
 
 header > .icon-box > div > img:last-child {
@@ -328,10 +300,47 @@ header.show > .icon-box > div > img:first-child {
   display: none;
 }
 
+header.on.show > .icon-box > div > img:nth-child(2) {
+  display: none;
+}
+
 header.show > .icon-box > div > img:last-child {
   display: block;
 }
 
+header.on > .icon-box > div > img:first-child {
+  display: none;
+}
+
+header.on > .icon-box > div > img:nth-child(2) {
+  display: block;
+}
+
+/* --------------------------------header end-------------------------------- */
+
+.talk-btn {
+  height: 57px;
+  width: 57px;
+  background: #AF9989;
+  border-radius: 18px;
+  box-shadow: 1px 1px 4px rgba(25, 25, 25, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.03em;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  position: fixed;
+  bottom: 44px;
+  right: 44px;
+  z-index: 90;
+  cursor: pointer;
+}
+
+/* --------------------------------search start-------------------------------- */
 .search-box {
   background-color: #fffdf9;
   padding: 80px 0 120px;
@@ -409,3 +418,252 @@ header.show > .icon-box > div > img:last-child {
   color: #47423E;
   white-space: nowrap;
 }
+/* --------------------------------search end-------------------------------- */
+
+/* --------------------------------section-1 start-------------------------------- */
+.section-1 > .swiper-1 {
+  position: relative;
+}
+
+.section-1 .swiper-button-next {
+  background: url(https://ollio.kr/_msync/img/slide_next_wt_s20.svg)
+  repeat center;
+  width: 20px;
+  height: 30px;
+  right: 100px;
+  position: absolute;
+}
+
+.section-1 .swiper-button-next:after {
+  display: none;
+}
+
+.section-1 .swiper-button-prev {
+  background: url(https://ollio.kr/_msync/img/slide_prev_wt_s20.svg)
+  repeat center;
+  width: 20px;
+  height: 30px;
+  left: 100px;
+  position: absolute;
+}
+
+.section-1 .swiper-button-prev:after {
+  display: none;
+}
+/* --------------------------------section-1 end-------------------------------- */
+
+/* --------------------------------section-2 start-------------------------------- */
+.section-2 {
+  padding: 150px 0 40px;
+}
+
+.section-2 > h2 {
+  font-size: 42px;
+  line-height: 48px;
+  color: #191919;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-2 .swiper-box-2 {
+  border: 1px solid red;
+}
+
+.section-2 .swiper-box-2 .swiper-2 {
+  border: 1px solid green;
+  padding: 0 20px;
+  max-width: 1492px;
+  margin: auto;
+  position: relative;
+}
+
+.section-2 .swiper-box-2 .swiper-slide {
+  padding-bottom: 70px;
+}
+
+.section-2 .swiper-box-2 .swiper-slide > .txt-box-2 {
+  margin: 16px 30px auto;
+  text-align: center;
+}
+
+.section-2 .swiper-box-2 .swiper-slide > .txt-box-2 > strong {
+  font-size: 17px;
+  font-weight: 400;
+  color: #191919;
+}
+
+.section-2 .swiper-box-2 .swiper-slide > .txt-box-2 > div {
+  margin-top: 4px;
+}
+
+.section-2 .swiper-box-2 .swiper-slide > .txt-box-2 > div > span {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.section-2 .swiper-box-2 .swiper-slide > .txt-box-2 > div > span:first-child {
+  margin-right: 5px;
+  color: #8c0000;
+}
+
+.section-2 .swiper-box-2 .swiper-slide > .txt-box-2 > div > span:nth-child(2) {
+  color: #191919;
+}
+
+.section-2 > .swiper-box-2 .swiper-slide > .txt-box-2 > div > span:last-child {
+  font-size: 14px;
+  color: #8e8a83;
+  font-weight: 500;
+  text-decoration: line-through;
+  line-height: 18px;
+}
+
+.section-2 .swiper-scrollbar {
+  width: 616px !important;
+  height: 2px !important;
+  background: rgba(25, 25, 25, 0.1);
+  margin: 0 auto !important;
+  left: 50%;
+}
+
+.section-2 .swiper-scrollbar-drag {
+  width: 243.269px;
+  cursor: pointer;
+  background: rgba(25, 25, 25, 0.5);
+}
+
+.section-2 .swiper-button-next {
+  background: url(//ollio.kr/_msync/img/slide_next_gray_s20.svg)
+  no-repeat center / cover;
+  width: 16px;
+  height: 32px;
+  right: 100px;
+  position: absolute;
+}
+
+.section-2 .swiper-button-next:after {
+  display: none;
+}
+
+.section-2 .swiper-button-prev {
+  background: url(https://ollio.kr/_msync/img/slide_prev_gray_s20.svg)
+  no-repeat center / cover;
+  width: 16px;
+  height: 32px;
+  left: -56px;
+  position: absolute;
+}
+
+.section-2 .swiper-button-prev:after {
+  display: none;
+}
+/* --------------------------------section-2 end-------------------------------- */
+/* --------------------------------section-3 start-------------------------------- */
+.section-3 {
+  padding: 140px 0 70px;
+}
+
+.section-3 > h2 {
+  font-size: 42px;
+  line-height: 48px;
+  color: #191919;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-3 .swiper-3 {
+  position: relative;
+}
+
+.section-3 .swiper-box-3 .swiper-3 {
+  border: 1px solid green;
+  padding: 0 20px;
+  max-width: 1492px;
+  margin: auto;
+}
+
+.section-3 .swiper-box-3 .swiper-slide {
+  padding-bottom: 70px;
+}
+
+.section-3 .swiper-box-3 .swiper-slide > .txt-box-3 {
+  margin: 16px 30px auto;
+  text-align: center;
+}
+
+.section-3 .swiper-box-3 .swiper-slide > .txt-box-3 > strong {
+  font-size: 17px;
+  font-weight: 400;
+  color: #191919;
+}
+
+.section-3 .swiper-box-3 .swiper-slide > .txt-box-3 > div {
+  margin-top: 4px;
+}
+
+.section-3 .swiper-box-3 .swiper-slide > .txt-box-3 > div > span {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.section-3 .swiper-box-3 .swiper-slide > .txt-box-3 > div > span:first-child {
+  margin-right: 5px;
+  color: #8c0000;
+}
+
+.section-3 .swiper-box-3 .swiper-slide > .txt-box-3 > div > span:nth-child(2) {
+  color: #191919;
+}
+
+.section-3 > .swiper-box-3 .swiper-slide > .txt-box-3 > div > span:last-child {
+  font-size: 14px;
+  color: #8e8a83;
+  font-weight: 500;
+  text-decoration: line-through;
+  line-height: 18px;
+}
+
+.section-3 .swiper-scrollbar {
+  width: 616px !important;
+  height: 2px !important;
+  background: rgba(25, 25, 25, 0.1);
+  margin: 0 auto !important;
+  left: 50%;
+}
+
+.section-2 .swiper-scrollbar-drag {
+  width: 243.269px;
+  cursor: pointer;
+  background: rgba(25, 25, 25, 0.5);
+}
+
+.section-2 .swiper-button-next {
+  background: url(//ollio.kr/_msync/img/slide_next_gray_s20.svg)
+  no-repeat center / cover;
+  width: 16px;
+  height: 32px;
+  right: 100px;
+  position: absolute;
+}
+
+.section-2 .swiper-button-next:after {
+  display: none;
+}
+
+.section-2 .swiper-button-prev {
+  background: url(https://ollio.kr/_msync/img/slide_prev_gray_s20.svg)
+  no-repeat center / cover;
+  width: 16px;
+  height: 32px;
+  left: -56px;
+  position: absolute;
+}
+
+.section-2 .swiper-button-prev:after {
+  display: none;
+}
+/* --------------------------------section-3 end-------------------------------- */
