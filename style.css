@@ -482,6 +482,14 @@ header.on > .icon-box > div > img:nth-child(2) {
   padding-bottom: 70px;
 }
 
+.section-2 .swiper-box-2 .swiper-slide > a > img {
+  transition: opacity .3s;
+}
+
+.section-2 .swiper-box-2 .swiper-slide > a:hover > img {
+  opacity: 0.9;
+}
+
 .section-2 .swiper-box-2 .swiper-slide > .txt-box-2 {
   margin: 16px 30px auto;
   text-align: center;
@@ -589,6 +597,14 @@ header.on > .icon-box > div > img:nth-child(2) {
   padding-bottom: 70px;
 }
 
+.section-3 .swiper-box-3 .swiper-slide > a > img {
+  transition: opacity .3s;
+}
+
+.section-3 .swiper-box-3 .swiper-slide > a:hover > img {
+  opacity: 0.9;
+}
+
 .section-3 .swiper-box-3 .swiper-slide > .txt-box-3 {
   margin: 16px 30px auto;
   text-align: center;
@@ -635,13 +651,13 @@ header.on > .icon-box > div > img:nth-child(2) {
   left: 50%;
 }
 
-.section-2 .swiper-scrollbar-drag {
+.section-3 .swiper-scrollbar-drag {
   width: 243.269px;
   cursor: pointer;
   background: rgba(25, 25, 25, 0.5);
 }
 
-.section-2 .swiper-button-next {
+.section-3 .swiper-button-next {
   background: url(//ollio.kr/_msync/img/slide_next_gray_s20.svg)
   no-repeat center / cover;
   width: 16px;
@@ -650,11 +666,11 @@ header.on > .icon-box > div > img:nth-child(2) {
   position: absolute;
 }
 
-.section-2 .swiper-button-next:after {
+.section-3 .swiper-button-next:after {
   display: none;
 }
 
-.section-2 .swiper-button-prev {
+.section-3 .swiper-button-prev {
   background: url(https://ollio.kr/_msync/img/slide_prev_gray_s20.svg)
   no-repeat center / cover;
   width: 16px;
@@ -663,7 +679,169 @@ header.on > .icon-box > div > img:nth-child(2) {
   position: absolute;
 }
 
-.section-2 .swiper-button-prev:after {
+.section-3 .swiper-button-prev:after {
   display: none;
 }
 /* --------------------------------section-3 end-------------------------------- */
+/* --------------------------------section-5 start-------------------------------- */
+.section-5 {
+  padding: 70px 20px;
+}
+
+.section-5 > h2 {
+  font-size: 42px;
+  line-height: 48px;
+  color: #191919;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-5 .swiper-box-5 {
+  border: 1px solid red;
+}
+
+.section-5 .swiper-box-5 .swiper-5 {
+  border: 1px solid green;
+  padding: 0 20px;
+  max-width: 1492px;
+  margin: auto;
+  position: relative;
+}
+
+.section-5 .swiper-box-5 .swiper-slide {
+  padding-bottom: 70px;
+}
+
+.section-5 .swiper-box-5 .swiper-slide > a > img {
+  transition: opacity .3s;
+}
+
+.section-5 .swiper-box-5 .swiper-slide > a:hover > img {
+  opacity: 0.9;
+}
+
+.section-5 .swiper-box-5 .swiper-slide > .txt-box-5 {
+  margin: 16px 30px auto;
+  text-align: center;
+}
+
+.section-5 .swiper-box-5 .swiper-slide > .txt-box-5 > strong {
+  font-size: 17px;
+  font-weight: 400;
+  color: #191919;
+}
+
+.section-5 .swiper-box-5 .swiper-slide > .txt-box-5 > div {
+  margin-top: 4px;
+}
+
+.section-5 .swiper-box-5 .swiper-slide > .txt-box-5 > div > span {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.section-5 .swiper-box-5 .swiper-slide > .txt-box-5 > div > span:first-child {
+  margin-right: 5px;
+  color: #8c0000;
+}
+
+.section-5 .swiper-box-5 .swiper-slide > .txt-box-5 > div > span:nth-child(2) {
+  color: #191919;
+}
+
+.section-5 > .swiper-box-5 .swiper-slide > .txt-box-5 > div > span:last-child {
+  font-size: 14px;
+  color: #8e8a83;
+  font-weight: 500;
+  text-decoration: line-through;
+  line-height: 18px;
+}
+
+.section-5 .more {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-5 .more > a {
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-decoration: underline;
+  color: #8E8A83;
+  display: inline-block;
+}
+/* --------------------------------section-5 end-------------------------------- */
+
+/* --------------------------------section-6 start-------------------------------- */
+.section-6 {
+  display: flex;
+}
+
+.section-6 > div {
+  flex-grow: 1;
+}
+/* --------------------------------section-6 end-------------------------------- */
+
+/* --------------------------------section-7 start-------------------------------- */
+.section-7 {
+  padding: 140px 0;
+}
+
+.section-7 > h2 {
+  font-size: 42px;
+  line-height: 48px;
+  color: #191919;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-7 > nav > ul {
+  display: flex;
+  padding: 0 20px;
+  max-width: 1492px;
+  margin: auto;
+}
+
+.section-7 > nav > ul > li {
+  padding: 16px;
+}
+
+.section-7 > nav > ul > li > a {
+  position: relative;
+}
+
+.section-7 > nav > ul > li > a::after {
+  content: "#Wispy";
+  position: absolute;
+  bottom: 16px;
+  left: 20px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.section-7 > nav > ul > li:nth-child(2) > a::after {
+  content: "#Voluminous";
+}
+
+.section-7 > nav > ul > li:nth-child(3) > a::after {
+  content: "#Spikly";
+}
+
+.section-7 > nav > ul > li:nth-child(4) > a::after {
+  content: "#Soft Brown";
+}
+
+.section-7 > nav > ul > li:nth-child(5) > a::after {
+  content: "#Natural";
+}
+
+.section-7 > nav > ul > li:nth-child(6) > a::after {
+  content: "#Clear";
+}
+/* --------------------------------section-7 end-------------------------------- */

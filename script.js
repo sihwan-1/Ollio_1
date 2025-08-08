@@ -77,3 +77,15 @@ function Swiper_3() {
 }
 Swiper_3();
 
+function Swiper_5() {
+  var swiper = new Swiper(".swiper-5", {
+    slidesPerView: 4,
+    spaceBetween: 32,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}
+Swiper_5();
+
