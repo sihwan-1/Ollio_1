@@ -1041,3 +1041,40 @@ header > .icon-box > a > div > p {
   background: #007aff;
 }
 /* --------------------------------section-8 end-------------------------------- */
+
+.review-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  padding: 0 30px;
+  
+}
+
+.review-slider ul {
+  max-width: 1330px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pagination span {
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+  padding: 4px 8px;
+  background: #eee;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pagination .active {
+  background: #333;
+  color: #fff;
+}
