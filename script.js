@@ -1,10 +1,14 @@
+$('.start-popup').addClass('close'); // 임시
+
 // start popup 스크립트
 function Popup_close() {
   $('.popup-close > p').click(function () {
     $('.start-popup').addClass('close');
   });
 }
-Popup_close() ;
+Popup_close();
+
+
 
 $(window).on('scroll', function () {
   let scrollTop = $(this).scrollTop();
@@ -52,11 +56,11 @@ function Swiper_2() {
     slidesPerView: 4,
     spaceBetween: 32,
     scrollbar: {
-      el: ".swiper-scrollbar",
+      el: ".swiper-box-2 .swiper-scrollbar",
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-box-2 .swiper-button-next",
+      prevEl: ".swiper-box-2 .swiper-button-prev",
     },
   });
 }
@@ -67,11 +71,11 @@ function Swiper_3() {
     slidesPerView: 3,
     spaceBetween: 32,
     scrollbar: {
-      el: ".swiper-scrollbar",
+      el: ".swiper-box-3 .swiper-scrollbar",
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-box-3 .swiper-button-next",
+      prevEl: ".swiper-box-3 .swiper-button-prev",
     },
   });
 }
@@ -82,8 +86,21 @@ function Swiper_5() {
     slidesPerView: 4,
     spaceBetween: 32,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-box-5 .swiper-button-next",
+      prevEl: ".swiper-box-5 .swiper-button-prev",
+    },
+  });
+}
+Swiper_5();
+
+function Swiper_8() {
+  var swiper = new Swiper(".swiper-8", {
+    pagination: {
+      el: ".swiper-box-8 .swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
     },
   });
 }
