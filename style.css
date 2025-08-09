@@ -934,12 +934,42 @@ header > .icon-box > a > div > p {
 
 .section-8 .swiper-box-8 {
   padding: 24px 0 0;
+  max-width: 1390px;
   position: relative;
+}
+
+.section-8 .swiper-box-8 > a {
+  position: absolute;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  top: 0;
+  right: 30px;
+  color: #9a9a9a;
+}
+
+.section-8 .swiper-box-8 >  span {
+  position: absolute;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  bottom: 38px;
+  right: 30px;
+  color: #9a9a9a;
+}
+
+.section-8 .swiper-8 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 57px;
 }
 
 .section-8 .swiper-box-8 .swiper-slide {
   display: flex;
   justify-content: center;
+  max-width: 1390px;
 }
 
 .section-8 ul {
@@ -1019,10 +1049,11 @@ header > .icon-box > a > div > p {
 }
 
 .section-8 .swiper-box-8 .swiper-pagination {
-  border: 1px solid red;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
 }
 
 .section-8 .swiper-box-8 .swiper-pagination-bullet {
@@ -1030,15 +1061,16 @@ header > .icon-box > a > div > p {
   height: 20px !important;
   text-align: center;
   line-height: 20px;
-  font-size: 12px;
-  color: #000;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #9a9a9a !important;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
+  background: none !important;
 }
 
+
 .section-8 .swiper-box-8 .swiper-pagination-bullet-active {
-  color: #fff;
-  background: #007aff;
+  color: #a98b87 !important;
 }
 /* --------------------------------section-8 end-------------------------------- */
 
