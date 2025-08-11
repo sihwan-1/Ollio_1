@@ -205,11 +205,11 @@ header > .menu-1 > .menu-box-2 > .menu-1-2 {
   position: absolute;
   top: 36px;
   left: 100px;
+  z-index: 20;
 }
 
 header > .menu-1 > .menu-box-2 > .menu-1-2 > li {
   padding-left: 30px;
-  position: relative;
 }
 
 header > .menu-1 > .menu-box-2 > .menu-1-2 > li:first-child {
@@ -223,6 +223,22 @@ header > .menu-1> .menu-box-2 > .menu-1-2 > li > a {
 
 header > .menu-1 > .menu-box-2 > .menu-1-2 > li > a:hover {
   color: #47423E;
+}
+
+header > .menu-1 > .menu-box-1 > li > a,
+header > .menu-1 > .menu-box-2 > .menu-1-2 > li > a {
+  position: relative;
+  z-index: 20; /* 서브메뉴 배경보다 위 */
+}
+
+header > .menu-1 > .menu-box-2 > .menu-1-2 > li > ul {
+  position: absolute;
+  top: 0; /* 헤더 전체 위까지 채움 */
+  left: 0;
+  background-color: #fffdf9;
+  padding: 145px 100px 100px; /* 위쪽 공간 확보해서 SHOP 안 가리게 */
+  box-sizing: border-box;
+  z-index: 10;
 }
 
 header > a {
