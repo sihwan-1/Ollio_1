@@ -36,6 +36,18 @@ function Search_1() {
 }
 Search_1();
 
+function Menu_blur() {
+  $('.menu-1').mouseenter(function () {
+    $('.bg').addClass('blur');
+  });
+
+  $('.menu-1').mouseleave(function () {
+    $('.bg').removeClass('blur');
+  });
+}
+Menu_blur();
+
+
 function Swiper_1() {
   var swiper = new Swiper(".swiper-1", {
     loop: true,

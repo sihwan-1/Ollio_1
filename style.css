@@ -231,14 +231,60 @@ header > .menu-1 > .menu-box-2 > .menu-1-2 > li > a {
   z-index: 20; /* 서브메뉴 배경보다 위 */
 }
 
+header > .menu-1 > .menu-box-2 > .menu-1-2 > li:hover > ul {
+  opacity: 1;
+}
+
 header > .menu-1 > .menu-box-2 > .menu-1-2 > li > ul {
   position: absolute;
-  top: 0; /* 헤더 전체 위까지 채움 */
-  left: 0;
+  top: -71PX; /* 헤더 전체 위까지 채움 */
+  left: -100PX;
+  width: 506px;
+  height: 1000px;
   background-color: #fffdf9;
   padding: 145px 100px 100px; /* 위쪽 공간 확보해서 SHOP 안 가리게 */
   box-sizing: border-box;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+}
+
+header > .menu-1 > .menu-box-2 > .menu-1-2 > li > ul > li {
+  margin-top: 14px;
+}
+
+header > .menu-1 > .menu-box-2 > .menu-1-2 > li > ul > li.br {
+  margin-top: 32px;
+}
+
+header > .menu-1 > .menu-box-2 > .menu-1-2 > li > ul > li > a {
+  color: #8E8A83;
+  display: block;
+  font-size: 23px;
+  line-height: 31px;
+  font-weight: 400;
+}
+
+header > .menu-1 > .menu-box-2 > .menu-1-2 > li > ul > li > a:hover {
+  color: #47423E;
+}
+
+header > .menu-1 > .menu-box-2 > .menu-1-2 > li > ul > li.bottom {
+  margin-top: 10px;
+}
+
+header > .menu-1 > .menu-box-2 > .menu-1-2 > li > ul > li.grow {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+header > .menu-1 > .menu-box-2 > .menu-1-2 > li > ul > li.bottom > a {
+  display: block;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
 }
 
 header > a {
@@ -476,6 +522,19 @@ header > .icon-box > a > div > p {
   white-space: nowrap;
 }
 /* --------------------------------search end-------------------------------- */
+
+/* --------------------------------bg blur start-------------------------------- */
+.bg.blur {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(71, 66, 62, 0.3);
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+/* --------------------------------bg blur end-------------------------------- */
+
 
 /* --------------------------------section-1 start-------------------------------- */
 .section-1 > .swiper-1 {
