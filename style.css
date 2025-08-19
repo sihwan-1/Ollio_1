@@ -248,6 +248,7 @@ header > .menu-1 > .menu-box-2 > .menu-1-2 > li > ul {
   display: flex;
   flex-direction: column;
   opacity: 0;
+  font-family: "Cormorant Garamond", serif;
 }
 
 header > .menu-1 > .menu-box-2 > .menu-1-2 > li > ul > li {
@@ -580,6 +581,7 @@ header > .icon-box > a > div > p {
   font-weight: 400;
   text-align: center;
   margin-bottom: 32px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .section-2 .swiper-box-2 {
@@ -697,6 +699,7 @@ header > .icon-box > a > div > p {
   font-weight: 400;
   text-align: center;
   margin-bottom: 32px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .section-3 .swiper-box-3 {
@@ -813,6 +816,7 @@ header > .icon-box > a > div > p {
   font-weight: 400;
   text-align: center;
   margin-bottom: 32px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .section-5 .swiper-box-5 {
@@ -941,6 +945,7 @@ header > .icon-box > a > div > p {
   font-weight: 400;
   text-align: center;
   margin-bottom: 32px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .section-7 > nav > ul {
@@ -1000,11 +1005,12 @@ header > .icon-box > a > div > p {
 
 .section-8 > h2 {
   font-size: 42px;
-    line-height: 48px;
-    color: #191919;
-    font-weight: 400;
-    margin-bottom: 4px;
-    text-align: center;
+  line-height: 48px;
+  color: #191919;
+  font-weight: 400;
+  margin-bottom: 4px;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .section-8 .swiper-box-8 {

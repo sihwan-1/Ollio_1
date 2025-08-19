@@ -1,4 +1,3 @@
-$('.start-popup').addClass('close'); // 임시
 
 // start popup 스크립트
 function Popup_close() {
@@ -110,6 +109,10 @@ function Swiper_8() {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      autoplay: {
+        delay: 3000,          // 3초마다 자동 전환
+        disableOnInteraction: false,
+      },
       renderBullet: function (index, className) {
         return '<span class="' + className + '">' + (index + 1) + "</span>";
       },
